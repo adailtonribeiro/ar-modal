@@ -1,7 +1,7 @@
 {
   "name": "ar-modal",
   "version": "0.0.1",
-  "description": "Stencil Component Starter",
+  "description": "A Simple Web Component Modal",
   "module": "dist/esm/index.js",
   "main": "dist/index.js",
   "types": "dist/types/components.d.ts",
@@ -15,7 +15,8 @@
     "serve": "stencil-dev-server",
     "start": "npm run dev",
     "test": "jest",
-    "test.watch": "jest --watch"
+    "test.watch": "jest --watch",
+    "publish-npm": "npm run build && npm publish"
   },
   "dependencies": {},
   "devDependencies": {
@@ -27,14 +28,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ionic-team/stencil-component-starter.git"
+    "url": "git+https://github.com/adailtonribeiro/ar-modal.git"
   },
-  "author": "Ionic Team",
+  "author": "Adailton Ribeiro",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ionic-team/stencil"
+    "url": "https://github.com/adailtonribeiro/ar-modal"
   },
-  "homepage": "https://github.com/ionic-team/stencil",
+  "homepage": "https://github.com/adailtonribeiro/ar-modal",
   "jest": {
     "transform": {
       "^.+\\.(ts|tsx)$": "<rootDir>/node_modules/@stencil/core/testing/jest.preprocessor.js"
