@@ -28,8 +28,9 @@ declare global {
 
   namespace StencilComponents {
     interface ArModal {
-      'first': string;
-      'last': string;
+      'close': () => void;
+      'modalTitle': string;
+      'open': () => void;
     }
   }
 
@@ -52,8 +53,7 @@ declare global {
   }
   namespace JSXElements {
     export interface ArModalAttributes extends HTMLAttributes {
-      'first'?: string;
-      'last'?: string;
+      'modalTitle'?: string;
     }
   }
 }

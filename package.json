@@ -1,6 +1,6 @@
 {
   "name": "ar-modal",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Simple Web Component Modal",
   "module": "dist/esm/index.js",
   "main": "dist/index.js",
@@ -20,7 +20,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@stencil/core": "^0.9.1",
+    "@stencil/core": "^0.9.5",
     "@stencil/dev-server": "latest",
     "@stencil/utils": "latest",
     "@types/jest": "^21.1.1",

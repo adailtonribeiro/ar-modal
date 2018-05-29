@@ -3,13 +3,31 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
-  <title>Stencil Component Starter</title>
+  <title>ArModal</title>
   <script src="/build/armodal.js"></script>
 
 </head>
 <body>
 
-<ar-modal first="Test(4)" last="'Stencil' JS"></ar-modal>
+<ar-modal modal-title="My First Modal">
+  <div slot="item-body">
+    <h3>My modal body</h3>
+  </div>
+  <div slot="item-footer">
+    <h3>My modal footer</h3>
+  </div>
+</ar-modal>
+
+<button>Open Modal8</button>
+
+<script>
+  var btn = document.querySelector('button');
+  var arModal = document.querySelector('ar-modal');
+  btn.addEventListener('click', function () {
+    console.log('Opening Modal');
+    arModal.open();
+  })
+</script>
 
 </body>
 </html>

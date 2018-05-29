@@ -1,4 +1,4 @@
-import { Component, Prop } from '@stencil/core';
+import {Component, Prop, Element, Method} from '@stencil/core';
 
 @Component({
   tag: 'ar-modal',
@@ -7,13 +7,35 @@ import { Component, Prop } from '@stencil/core';
 })
 export class ArModal {
 
-  @Prop() first: string;
-  @Prop() last: string;
+  @Element() modalEl: HTMLElement;
+
+  @Prop() modalTitle: string;
+
+  @Method()
+  open() {
+    this.modalEl.shadowRoot.querySelector('.modal')['style'].display = 'block';
+  }
+
+  @Method()
+  close() {
+    this.modalEl.shadowRoot.querySelector('.modal')['style'].display = 'none';
+  }
 
   render() {
     return (
-      <div>
-        Hello, World! I'm {this.first} {this.last}
+      <div class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close" onClick={this.close.bind(this)}>&times;</span>
+            <h2>{this.modalTitle}</h2>
+          </div>
+          <div class="modal-body">
+            <slot name="item-body"/>
+          </div>
+          <div class="modal-footer">
+            <slot name="item-footer"/>
+          </div>
+        </div>
       </div>
     );
   }
